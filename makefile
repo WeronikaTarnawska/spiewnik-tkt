@@ -1,5 +1,5 @@
 all:
-	pdflatex spiewnik.tex < enters.txt > err.txt 2> err.txt
+	pdflatex -interaction nonstopmode -halt-on-error -file-line-error spiewnik.tex > err.txt 2> err.txt
 
 sort:
 	cp spiewnik.tex in.tex
