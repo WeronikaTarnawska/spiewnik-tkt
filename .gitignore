@@ -1,0 +1,10 @@
+screens/
+*.txt
+*.aux
+*.log
+*.out
+out.pdf
+in.pdf
+*.toc
+in.tex
+out.tex
