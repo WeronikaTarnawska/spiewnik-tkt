@@ -8,3 +8,6 @@ in.pdf
 *.toc
 in.tex
 out.tex
+*.fdb_latexmk 
+*.fls 
+*.synctex.gz
