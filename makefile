@@ -11,4 +11,4 @@ sort:
 	python3 sorter.py
 
 clean:
-	rm *.aux *.log *.out *.toc *.fdb_latexmk *.fls *.synctex.gz err.txt
+	rm *.aux *.log *.out *.toc *.fdb_latexmk *.fls err.txt
