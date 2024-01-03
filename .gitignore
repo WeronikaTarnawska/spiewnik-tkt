@@ -11,3 +11,14 @@ out.tex
 *.fdb_latexmk 
 *.fls 
 *.synctex.gz
+
+chordchart.pdf
+chordchart.tex
+full_chordchart.pdf
+full_chordchart.tex
+index.pdf
+index.tex
+spiewnik-12-25-2252.pdf
+spiewnik-tkt-2024.pdf
+spiewnik-tkt-2024.tex
+spiewnik.pdf
