@@ -116,7 +116,7 @@ index = a+b+c
 index.sort(key=lambda x: locale.strxfrm(x))
 index = list(dict.fromkeys(index))
 
-with open('index-py.txt', "w", encoding="utf8") as fout:
+with open('index.txt', "w", encoding="utf8") as fout:
   fout.write("~\\\\\n")
   prev = '.'
   for i in index:
