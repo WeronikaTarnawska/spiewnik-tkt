@@ -22,7 +22,7 @@ def get_titles():
     elif ll.lstrip() and ll.lstrip()[:8] == "\\section":
       ll=ll[ll.find('{')+1:ll.find('}')]
       if '\\foreignlanguage' in ll:
-        ll="Salo"
+        ll="Sało"
       titles.append(f"{ll.strip()} {page}\\\\\n")
         
     ll = fin.readline()
@@ -114,6 +114,7 @@ maxline=32
 a, b, c = get_firstlines(), get_refrains(), get_titles()
 index = a+b+c
 index.sort(key=lambda x: locale.strxfrm(x))
+index = list(dict.fromkeys(index))
 
 with open('index-py.txt', "w", encoding="utf8") as fout:
   fout.write("~\\\\\n")
@@ -127,4 +128,3 @@ with open('index-py.txt', "w", encoding="utf8") as fout:
 
 
 
-# Salo 135 - manualnie
