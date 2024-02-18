@@ -11,7 +11,9 @@ out.tex
 *.fdb_latexmk 
 *.fls 
 *.synctex.gz
+*.synctex*
 
+images/
 chordchart.pdf
 chordchart.tex
 full_chordchart.pdf
@@ -22,3 +24,5 @@ spiewnik-12-25-2252.pdf
 # spiewnik-tkt-2024.pdf
 spiewnik-tkt-2024.tex
 spiewnik.pdf
+sorted.tex
+sorted.pdf
