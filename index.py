@@ -5,9 +5,6 @@ import locale
 
 locale.setlocale(locale.LC_COLLATE, "pl_PL.UTF-8")
 
-def write_output():
-  fout = open("out.tex", "w", encoding="utf8")
-
 def get_titles():
   fin = open("spiewnik.tex", "r", encoding="utf8")
   titles = []
@@ -110,20 +107,21 @@ def get_refrains():
   fin.close()
   return firstlines
 
-maxline=32
-a, b, c = get_firstlines(), get_refrains(), get_titles()
-index = a+b+c
-index.sort(key=lambda x: locale.strxfrm(x))
-index = list(dict.fromkeys(index))
+if __name__ == "__main__":
+  maxline=32
+  a, b, c = get_firstlines(), get_refrains(), get_titles()
+  index = a+b+c
+  index.sort(key=lambda x: locale.strxfrm(x))
+  index = list(dict.fromkeys(index))
 
-with open('index.txt', "w", encoding="utf8") as fout:
-  fout.write("~\\\\\n")
-  prev = '.'
-  for i in index:
-    if not i[0].isnumeric() and i[0]!="'" and i[0].upper() != prev:
-      prev=i[0].upper()
-      fout.write("\\\\\n{\\footnotesize \\textbf{"+f"{prev}"+"\\\} }\n")
-    fout.write(i)
+  with open('index.txt', "w", encoding="utf8") as fout:
+    fout.write("~\\\\\n")
+    prev = '.'
+    for i in index:
+      if not i[0].isnumeric() and i[0]!="'" and i[0].upper() != prev:
+        prev=i[0].upper()
+        fout.write("\\\\\n{\\footnotesize \\textbf{"+f"{prev}"+"\\\} }\n")
+      fout.write(i)
     
 
 
