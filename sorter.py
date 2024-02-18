@@ -39,8 +39,8 @@ if __name__ == "__main__":
     #   continue
     elif line == "\n" and prevline=="\n":
       continue
-    elif line[:1] == "%":
-      continue
+    # elif line[:1] == "%": # skip comments
+    #   continue
     elif line[:14] == "\\end{document}":
       print(":)")
       break
