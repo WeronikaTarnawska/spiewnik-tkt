@@ -1,4 +1,4 @@
-all:
+help:
 	## lua     lualatex build
 	## pdf     pdflatex build (does not support custom font)
 	## sort    sort songs from spiewnik.tex, save result in sorted.tex
